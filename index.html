@@ -9,27 +9,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-gradient: linear-gradient(135deg, #03040c 0%, #0f1738 40%, #1e2875 75%, #2c3cb5 100%);
+      --bg-gradient: radial-gradient(circle at 50% 50%, #ff8e53 0%, #ff4e50 25%, #f857a6 50%, #e0c3fc 85%, #d4b5ff 100%);
       --text-color: #ffffff;
-      --text-muted: rgba(255, 255, 255, 0.6);
-      --border-color: rgba(255, 255, 255, 0.15);
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --button-hover: rgba(255, 255, 255, 0.15);
+      --text-muted: rgba(255, 255, 255, 0.7);
+      --border-color: rgba(255, 255, 255, 0.25);
+      --card-bg: rgba(255, 255, 255, 0.15);
+      --button-hover: rgba(255, 255, 255, 0.3);
       --accent-active: #ffffff;
-      --active-text: #0b112c;
-      --shadow-glow: rgba(79, 110, 247, 0.3);
+      --active-text: #f857a6;
+      --shadow-glow: rgba(255, 78, 80, 0.4);
     }
 
     [data-theme="light"] {
-      --bg-gradient: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 40%, #a5b4fc 75%, #818cf8 100%);
-      --text-color: #0f172a;
-      --text-muted: rgba(15, 23, 42, 0.6);
-      --border-color: rgba(15, 23, 42, 0.15);
-      --card-bg: rgba(255, 255, 255, 0.4);
-      --button-hover: rgba(255, 255, 255, 0.6);
-      --accent-active: #0f172a;
+      --bg-gradient: radial-gradient(circle at 50% 50%, #ffe4e1 0%, #ffb6c1 30%, #ffa07a 65%, #e6e6fa 100%);
+      --text-color: #4a154b;
+      --text-muted: rgba(74, 21, 75, 0.7);
+      --border-color: rgba(74, 21, 75, 0.18);
+      --card-bg: rgba(255, 255, 255, 0.45);
+      --button-hover: rgba(255, 255, 255, 0.7);
+      --accent-active: #4a154b;
       --active-text: #ffffff;
-      --shadow-glow: rgba(99, 102, 241, 0.2);
+      --shadow-glow: rgba(248, 87, 166, 0.25);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -160,7 +160,7 @@
       font-weight: 300;
       cursor: pointer;
       line-height: 1;
-      opacity: 0.7;
+      opacity: 0.85;
       transition: all 0.3s ease;
       padding: 10px 20px;
     }
@@ -189,7 +189,7 @@
       background: none;
       border: none;
       cursor: pointer;
-      opacity: 0.8;
+      opacity: 0.85;
       transition: all 0.3s ease;
       letter-spacing: 1px;
       text-transform: lowercase;
@@ -235,7 +235,7 @@
 
     <div class="timer-display-wrapper">
       <button class="adjust-btn" id="minusBtn" onclick="adjustTime(-1)">—</button>
-      <div class="time-display" id="timeDisplay">24:00</div>
+      <div class="time-display" id="timeDisplay">50:00</div>
       <button class="adjust-btn" id="plusBtn" onclick="adjustTime(1)">+</button>
     </div>
 
@@ -247,9 +247,9 @@
 
   <script>
     const MODES = {
-      pomodoro: { name: 'Focus', minutes: 24 },
-      shortBreak: { name: 'Short Break', minutes: 5 },
-      longBreak: { name: 'Long Break', minutes: 15 }
+      pomodoro: { name: 'Focus', minutes: 50 },
+      shortBreak: { name: 'Short Break', minutes: 10 },
+      longBreak: { name: 'Long Break', minutes: 20 }
     };
 
     let currentMode = 'pomodoro';
